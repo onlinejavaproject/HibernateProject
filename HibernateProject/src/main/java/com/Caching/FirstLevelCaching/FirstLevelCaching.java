@@ -20,6 +20,7 @@ public class FirstLevelCaching {
 		Employee emp = (Employee)session1.get(Employee.class, 1);
 		System.out.println(emp.getName());
 		
+		//if we fetch same record again it will not hit database, fetch data from cache
 		Employee emp1 = (Employee)session1.get(Employee.class, 1);
 		System.out.print(emp1.getName());
 		
